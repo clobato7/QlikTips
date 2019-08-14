@@ -7,12 +7,12 @@ Copy and enjoy it :)
 ## Version 1
 
 ```
-SUB CreateQVD(Table);
+SUB CreateQVD(Table)
   STORE [$(Table)] INTO [lib://HereIsYourLib/$(Table).qvd] (qvd);
   DROP TABLE [$(Table)];
   
-  Trace ==== "Generating QVD file of "$(Table)"... Done! ====;
-EndSub;
+  Trace ==== Generating QVD file of "$(Table)"... Done! ====;
+EndSub
 ```
 
 ```
@@ -22,12 +22,12 @@ CALL CreateQVD('Your Table Name without [ ]');
 ## Version 2 with specific table name
 
 ```
-SUB CreateQVD(Table, Name);
+SUB CreateQVD(Table, Name)
   STORE [$(Table)] INTO [lib://HereIsYourLib/$(Name).qvd] (qvd);
   DROP TABLE [$(Table)];
   
-  Trace ==== "Generating QVD file of "$(Name)"... Done! ====;
-EndSub;
+  Trace ==== Generating QVD file of "$(Name)"... Done! ====;
+EndSub
 ```
 
 ```
